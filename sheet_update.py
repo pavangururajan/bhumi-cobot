@@ -34,8 +34,9 @@ def read_data():
 
     return values
 
+
 def write_data(data):
     request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-            range=EDIT_SAMPLE_RANGE, valueInputOption="RAW", body={'values': [data]}).execute()
+            range=EDIT_SAMPLE_RANGE, valueInputOption="RAW", body={'values': [[data]]}).execute()
 
 
